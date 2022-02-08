@@ -109,13 +109,30 @@ ul {
   );
 }
 
-.right-content button:hover{
-    background-image: linear-gradient(
-    to right,
-    var(--secondary-color),
-    var(--primary-color),
-    var(--secondary-color)
-  );
+.call-to-action{
+    position: relative;
+    z-index: 1;
+}
+
+.call-to-action::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: -1;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in;
+}
+
+.call-to-action:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .main-cards {
@@ -325,6 +342,10 @@ ul {
     font-size: 1rem;
 }
 
+#red1,#red2,#red3,#red4{
+    color: var(--primary-color) !important;
+}
+
 .pro-1,.pro-2,.pro-3,.pro-4{
     margin: 0rem 0rem .5rem 0rem;
 }
@@ -389,7 +410,7 @@ ul {
     font-size: 1rem;
     display: none;
     opacity: .8;
-    transition: opacity 100ms;
+    transition: all 200ms ease-in-out;
 }
 
 .social-icons ul li a:hover{
@@ -404,6 +425,7 @@ ul {
     color: var(--text-color);
     display: flex;
     justify-content: center;
+    transition: all 200ms ease-in-out;
 }
 
 .developer a:hover{
