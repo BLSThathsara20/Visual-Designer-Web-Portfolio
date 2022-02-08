@@ -46,7 +46,10 @@ ul {
 
 .main-nav ul li a {
   text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
   color: var(--text-color);
+  transition: all 250ms ease-in-out;
 }
 .main-nav ul li a:hover {
   color: var(--text-color-hover);
@@ -106,6 +109,15 @@ ul {
   );
 }
 
+.right-content button:hover{
+    background-image: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
 .main-cards {
   padding: 1rem 0rem;
   background: linear-gradient(
@@ -138,6 +150,8 @@ ul {
   padding: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  opacity: .9;
+  transition: all 250ms ease-in-out;
 }
 
 .card img {
@@ -148,6 +162,7 @@ ul {
 
 .card:hover {
   background-color: var(--secondary-color);
+  opacity: 1;
 }
 
 .card h3 {
@@ -182,7 +197,8 @@ ul {
 .know-more a{
     color: var(--text-color) !important;
     margin-top: 1rem;
-    transform: 2;
+    font-size: 1rem;
+    transition: all 250ms ease-in-out;
 }
 
 .know-more a:hover{
@@ -372,10 +388,13 @@ ul {
     color: var(--text-color);
     font-size: 1rem;
     display: none;
+    opacity: .8;
+    transition: opacity 100ms;
 }
 
 .social-icons ul li a:hover{
     color: var(--text-color-hover);
+    opacity: 1;
 }
 
 .developer a{
